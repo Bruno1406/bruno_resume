@@ -1,8 +1,21 @@
 {{ define "main" }}
 <h2>{{ .Title }}</h2>
-<ul>
-    {{ range .Pages }}
-        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-    {{ end }}
-</ul>
+<p>Get to know more about my projects by clicking on the title of the boxes below!</p>
+<div class="columns">
+    <div class="column">
+        <h2><a href="{{ relURL "projects/sumo.md" }}">Sumo Robots</a></h2>
+        <p>Sumo robots competitions are very interesting and challengeing even though the goal is quite simple: to push your oponents out.</p>
+        <img src="{{ relURL "images/safira.jpg"}}" alt="Safira's picture">
+    </div>
+    <div class="column">
+        <h2><a href="{{ relURL "projects/vsss.md" }}">IEE Very Small Size</a></h2>
+        <p>The IEE VSS category is essentially a 3 vs 3 or 5 vs 5 soccer game, but with very small size autonomous robots</p>
+        <img src="{{ relURL "images/vsss.jpg"}}" alt = "VSSS Match"/>
+    </div>
+    <div class="column">
+        <h2><a href="{{ relURL "projects/quark.md" }}">The Quark Project</a></h2>
+        <p>The Quark project is a scaled down autonomous vehicle testing platform</p>
+        <img src="{{ relURL "images/quark_profile.png"}}" alt = "Quark Profile"/>    
+    </div>
+</div>
 {{ end }}
